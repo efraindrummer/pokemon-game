@@ -1,12 +1,16 @@
 <template>
     <h1>¿Quien es este Pokemon?</h1>
-    <PokemonPicture />
+    <PokemonPicture v-bind:pokemonId="150" v-bind:showPokemon="true" />
     <PokemonOptions />
 </template>
 
 <script>
 import PokemonOptions from '@/components/PokemonOptions.vue'
 import PokemonPicture from '@/components/PokemonPicture.vue'
+
+import getPokemonOptions from '@/helpers/getPokemonOptions'
+
+console.log(getPokemonOptions())
 
 export default {
     components: { PokemonOptions, PokemonPicture }
